@@ -3,6 +3,10 @@ java-wrapper CHANGELOG
 
 This file is used to list changes made in each version of the java-wrapper cookbook.
 
+1.2.2
+-----
+- Fixes around native_library_dest_dir and java.library.path
+
 1.2.1
 -----
 - Fixed Travis Build
