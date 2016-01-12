@@ -10,7 +10,7 @@ describe 'java_wrapper_test::native_lib' do
   end
 
   it 'extracts native library' do
-    expect(chef_run).to cherry_pick_ark('java_wrapper_native_lib').with(
+    expect(chef_run).to cherry_pick_ark('_usr_local_java_wrapper_lib_java_wrapper_native_lib').with(
       url: 'http://wrapper.tanukisoftware.com/download/3.5.21/wrapper-linux-x86-64-3.5.21.tar.gz',
       action: [:cherry_pick],
       path: '/usr/local/java_wrapper/lib',
