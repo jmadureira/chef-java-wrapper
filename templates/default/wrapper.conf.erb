@@ -32,21 +32,21 @@ wrapper.java.classpath.<%= i + 3%>=<%= cp %>
 
 # Java Library Path (location of Wrapper.DLL or libwrapper.so)
 <% 	lp_index = 1
-		unless @native_library_dest_dir.nil? || @native_library_dest_dir.empty?
+    unless @native_library_dest_dir.nil? || @native_library_dest_dir.empty?
 %>
 wrapper.java.library.path.<%= lp_index %>=<%= @native_library_dest_dir %>/lib
 <%
-	 		lp_index = lp_index + 1
-		end
-		if node['java_wrapper']['library_path'].nil? || node['java_wrapper']['library_path'].empty?
+      lp_index = lp_index + 1
+    end
+    if node['java_wrapper']['library_path'].nil? || node['java_wrapper']['library_path'].empty?
 %>
 wrapper.java.library.path.<%= lp_index %>=../lib
 <%
-		else
+    else
 %>
-	<% node['java_wrapper']['library_path'].each_with_index do |lp, i|%>
+  <% node['java_wrapper']['library_path'].each_with_index do |lp, i|%>
 wrapper.java.library.path.<%= i + lp_index%>=<%= lp %>
-	<% end %>
+  <% end %>
 <% end %>
 
 # Java Bits.  On applicable platforms, tells the JVM to run in 32 or 64-bit mode.
@@ -219,4 +219,3 @@ wrapper.ntservice.starttype=AUTO_START
 
 # Allow the service to interact with the desktop.
 wrapper.ntservice.interactive=false
-
