@@ -36,7 +36,7 @@ wrapper.java.classpath.<%= i + 3%>=<%= cp %>
 %>
 wrapper.java.library.path.<%= lp_index %>=<%= @native_library_dest_dir %>/lib
 <%
-			++lp_index
+	 		lp_index = lp_index + 1
 		end
 		if node['java_wrapper']['library_path'].nil? || node['java_wrapper']['library_path'].empty?
 %>
