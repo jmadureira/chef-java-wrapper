@@ -92,7 +92,7 @@ wrapper.logfile=<%= @log_file_path %>/<%= @log_file_name %>
 <% end %>
 
 # Format of output for the log file.  (See docs for formats)
-wrapper.logfile.format=LPTM
+wrapper.logfile.format=<%= @log_file_format %>
 
 # Log Level for log file output.  (See docs for log levels)
 wrapper.logfile.loglevel=INFO

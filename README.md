@@ -25,9 +25,10 @@ have to be provided:
 - `app_parameters`: the array of String that will be passed to the application
 - `java_parameters`: The array of java parameters
 - `log_file_name`: the file name where the logs will be stored. Use something relevant to your app_name, to make it clear what log you're readind.
+- `log_file_format`: the format of the log entries. Defaults to LPTM. Check http://wrapper.tanukisoftware.com/doc/english/prop-logfile-format.html for available formats.
 - `wrapper_working_dir`: configuring the Working Directory.
 
-This attributes can be used to further customize the application:
+These attributes can be used to further customize the application:
 - `app_long_name`: the long name used for the daemon
 - `app_dir`: the directory in which the application is deployed, it defaults to `/opt/#{app_name}`
 - `bin_dir`: the bin directory for the wrapper, it defaults to `#{app_dir}/bin`

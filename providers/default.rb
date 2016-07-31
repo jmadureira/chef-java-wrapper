@@ -78,6 +78,7 @@ def create_conf_files
       java_parameters: new_resource.java_parameters,
       log_file_path: new_resource.logs_dir,
       log_file_name: new_resource.log_file_name,
+      log_file_format: new_resource.log_file_format,
       wrapper_working_dir: new_resource.wrapper_working_dir,
       classpath: new_resource.classpath,
       app_parameters: new_resource.app_parameters,
